@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music visualizer</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css.css')}}" />
+  </head>
+  <body>
+    <div>
+      <a href=".">
+        <img
+          class="img-responsive"
+          src="{{url_for('static',filename='images/logo.jpg')}}"
+          style="width: 10%"
+        />
+      </a>
+      <div class="container">
+        <h1 class="heading" style="font-family: Courier New">
+          Music Visualizer
+        </h1>
+        <form method="POST" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <input type="submit" name="submitt" value="Play" />
+        </form>
+      </div>
+    </div>
+    <p class="m">{{message}}</p>
+  </body>
+</html>
